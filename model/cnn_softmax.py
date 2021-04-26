@@ -56,7 +56,7 @@ class CNN:
                 )
 
             # First convolutional layer
-            first_conv_weight = self.weight_variable([4, 4, 2, 32])
+            first_conv_weight = self.weight_variable([10, 10, 4, 128])
             first_conv_bias = self.bias_variable([32])
 
             input_image = tf.reshape(x_input, [-1, 28, 28, 1])
@@ -67,7 +67,7 @@ class CNN:
             first_conv_pool = self.max_pool_2x2(first_conv_activation)
 
             # Second convolutional layer
-            second_conv_weight = self.weight_variable([4, 4, 32, 64])
+            second_conv_weight = self.weight_variable([10, 10, 64, 128])
             second_conv_bias = self.bias_variable([64])
 
             second_conv_activation = tf.nn.relu(
