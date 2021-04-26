@@ -75,8 +75,8 @@ if __name__ == "__main__":
 
     if model_choice == "1":
         model = CNN(
-            alpha=1e-3,
-            batch_size=500,
+            alpha=1e-4,
+            batch_size=128,
             num_classes=num_classes,
             num_features=sequence_length,
         )
@@ -89,8 +89,8 @@ if __name__ == "__main__":
         )
     elif model_choice == "2":
         model = CNNSVM(
-            alpha=1e-3,
-            batch_size=500,
+            alpha=1e-4,
+            batch_size=128,
             num_classes=num_classes,
             num_features=sequence_length,
             penalty_parameter=args.penalty_parameter,
