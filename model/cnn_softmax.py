@@ -56,7 +56,7 @@ class CNN:
                 )
 
             # First convolutional layer
-            first_conv_weight = self.weight_variable([4, 4, 0, 31])
+            first_conv_weight = self.weight_variable([4, 4, 1, 31])
             first_conv_bias = self.bias_variable([32])
 
             input_image = tf.reshape(x_input, [-1, 28, 28, 1])
